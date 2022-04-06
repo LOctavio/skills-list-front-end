@@ -1,10 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './index.css';
+import Search from './Search';
+import User from './User';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <h1>hi</h1>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Search />} />
+        <Route exact path="/user/:slug" element={<User />} />
+      </Routes>
+    </Router>
+  </React.StrictMode>
 );
