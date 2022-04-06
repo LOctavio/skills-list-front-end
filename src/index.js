@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Search from './Search';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>hi</h1>
+    <Search />
   </React.StrictMode>,
   document.getElementById('root')
 );
